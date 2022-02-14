@@ -10,11 +10,14 @@ public class MovementRecognizer : MonoBehaviour
 {
     public XRNode inputSource;
     public UnityEngine.XR.Interaction.Toolkit.InputHelpers.Button inputButton;
+    public UnityEngine.XR.Interaction.Toolkit.InputHelpers.Button inputButton2;
     public float inputThreshold = 0.1f;
     public Transform movementSource;
 
     public float newPositionThresholdDistance = 0.05f;
     public GameObject debugCubePrefab;
+    public GameObject positionParticules;
+    public GameObject Teleporter;
     public bool creationMode = true;
     public string newGestureName;
 
@@ -43,19 +46,20 @@ public class MovementRecognizer : MonoBehaviour
     void Update()
     {
         UnityEngine.XR.Interaction.Toolkit.InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource), inputButton, out bool isPressed, inputThreshold);
+        UnityEngine.XR.Interaction.Toolkit.InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource), inputButton2, out bool isPressed2, inputThreshold);
 
         //Start Movement
-        if(!isMoving && isPressed)
+        if(!isMoving && isPressed && isPressed2)
         {
             StartMovement();
         }
         //End Movement
-        else if(isMoving && !isPressed)
+        else if(isMoving && (!isPressed || !isPressed2))
         {
             EndMovement();
         }
         //UpdateMovement
-        else if(isMoving && isPressed)
+        else if(isMoving && isPressed && isPressed2)
         {
             UpdateMovement();
         }
@@ -68,8 +72,10 @@ public class MovementRecognizer : MonoBehaviour
         positionsList.Clear();
         positionsList.Add(movementSource.position);
 
-        if(debugCubePrefab)
-            Destroy(Instantiate(debugCubePrefab,movementSource.position,Quaternion.identity),3);
+        if(debugCubePrefab){
+            Destroy(Instantiate(debugCubePrefab,positionParticules.transform.position,Quaternion.identity),3);
+        }
+        Teleporter.SetActive(false);     
     }
     void EndMovement()
     {
@@ -103,6 +109,7 @@ public class MovementRecognizer : MonoBehaviour
                 OnRecognized.Invoke(result.GestureClass);
             }
         }
+        Teleporter.SetActive(true);     
     }
 
     void UpdateMovement()
@@ -110,8 +117,9 @@ public class MovementRecognizer : MonoBehaviour
         Debug.Log("Update Movement");
         Vector3 lastPosition = positionsList[positionsList.Count - 1];
         if(Vector3.Distance(movementSource.position, lastPosition) > newPositionThresholdDistance){
-            if(debugCubePrefab)
-                Destroy(Instantiate(debugCubePrefab,movementSource.position,Quaternion.identity),3);
+            if(debugCubePrefab){
+                Destroy(Instantiate(debugCubePrefab,positionParticules.transform.position,Quaternion.identity),3);
+            }    
 
             positionsList.Add(movementSource.position);
         }

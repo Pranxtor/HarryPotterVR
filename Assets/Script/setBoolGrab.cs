@@ -9,6 +9,7 @@ public class setBoolGrab : MonoBehaviour
     public GameObject Sol;
     public GameObject fire;
     public GameObject gameover;
+    public GameObject SceneChanger;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class setBoolGrab : MonoBehaviour
         fire.SetActive(false);
         this.grabbing = false;
         gameover.SetActive(false);
+        SceneChanger.SetActive(false);
     }
 
     public void setGrab()
@@ -30,7 +32,7 @@ public class setBoolGrab : MonoBehaviour
 
     public IEnumerator wait()
     {
-        yield return new WaitForSeconds(400);
+        yield return new WaitForSeconds(5);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -42,11 +44,13 @@ public class setBoolGrab : MonoBehaviour
             fire.SetActive(true);
             gameover.SetActive(true);
             StartCoroutine(wait());
+            SceneChanger.SetActive(false);
 
         }else{
             fire.SetActive(false);
             gameover.SetActive(false);
-
+            SceneChanger.SetActive(true);
+            Sol.SetActive(false);
         }
     }
 

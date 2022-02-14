@@ -13,4 +13,8 @@ public class ObjectSpawner : MonoBehaviour
             item.SetActive(objectName == item.name);
         }
     }
+
+    public void Accio(){
+        
+    }
 }
