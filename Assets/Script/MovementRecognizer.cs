@@ -10,7 +10,6 @@ public class MovementRecognizer : MonoBehaviour
 {
     public XRNode inputSource;
     public UnityEngine.XR.Interaction.Toolkit.InputHelpers.Button inputButton;
-    public UnityEngine.XR.Interaction.Toolkit.InputHelpers.Button inputButton2;
     public float inputThreshold = 0.1f;
     public Transform movementSource;
 
@@ -44,19 +43,19 @@ public class MovementRecognizer : MonoBehaviour
     void Update()
     {
         UnityEngine.XR.Interaction.Toolkit.InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource), inputButton, out bool isPressed, inputThreshold);
-        UnityEngine.XR.Interaction.Toolkit.InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource), inputButton2, out bool isPressed2, inputThreshold);
+
         //Start Movement
-        if(!isMoving && isPressed && isPressed2)
+        if(!isMoving && isPressed)
         {
             StartMovement();
         }
         //End Movement
-        else if(isMoving && (!isPressed || !isPressed2))
+        else if(isMoving && !isPressed)
         {
             EndMovement();
         }
         //UpdateMovement
-        else if(isMoving && isPressed && isPressed2)
+        else if(isMoving && isPressed)
         {
             UpdateMovement();
         }
