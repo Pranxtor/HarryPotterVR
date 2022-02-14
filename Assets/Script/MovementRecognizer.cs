@@ -35,6 +35,7 @@ public class MovementRecognizer : MonoBehaviour
     void Start()
     {
         Debug.Log("Start");
+        Debug.Log(recognitionThreshold);
         string[] gestureFiles = Directory.GetFiles(Application.persistentDataPath, "*.xml");
         foreach(var item in gestureFiles)
         {
@@ -105,7 +106,7 @@ public class MovementRecognizer : MonoBehaviour
             Result result = PointCloudRecognizer.Classify(newGesture, trainingSet.ToArray());
             Debug.Log(result.GestureClass + result.Score);
 
-            if(result.Score < recognitionThreshold){
+            if(result.Score > recognitionThreshold){
                 OnRecognized.Invoke(result.GestureClass);
             }
         }
