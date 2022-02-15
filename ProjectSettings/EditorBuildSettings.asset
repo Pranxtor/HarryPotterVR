@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Salle3.unity
     guid: 6642381009bf14d4d8cb0f76ef6a5075
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/FinaleRoom.unity
     guid: 84099f635c41e904b9a2e7a5112fac60
   m_configObjects:
