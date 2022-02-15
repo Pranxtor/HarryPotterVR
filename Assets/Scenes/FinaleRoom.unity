@@ -2098,7 +2098,7 @@ MonoBehaviour:
   debugCubePrefab: {fileID: 1457005778}
   positionParticules: {fileID: 1199272891}
   Teleporter: {fileID: 1775880955}
-  creationMode: 0
+  creationMode: 1
   newGestureName: Lumos
   recognitionThreshold: 0.8
   OnRecognized:
@@ -2417,7 +2417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &803553853
 Transform:
   m_ObjectHideFlags: 0
