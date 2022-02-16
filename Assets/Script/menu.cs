@@ -20,7 +20,6 @@ public class menu : MonoBehaviour
     void Update()
     {
         UnityEngine.XR.Interaction.Toolkit.InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource), inputButton, out bool isPressed);
-
         if(isPressed){
             Debug.Log(menudDisplayed);
             if(menudDisplayed){
@@ -53,6 +52,6 @@ public class menu : MonoBehaviour
 
     public void Quitter ()
     {
-        
+        SceneManager.LoadScene("MenuPrincipal");
     }
 }

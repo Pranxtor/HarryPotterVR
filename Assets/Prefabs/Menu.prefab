@@ -84,6 +84,18 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3445886310230136991, guid: 9668459b3285f274ab3f1dad07e476c1, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445886310230136991, guid: 9668459b3285f274ab3f1dad07e476c1, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445886310230136991, guid: 9668459b3285f274ab3f1dad07e476c1, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445886310230136991, guid: 9668459b3285f274ab3f1dad07e476c1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -99,6 +111,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: menu, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3445886310449485565, guid: 9668459b3285f274ab3f1dad07e476c1, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445886310449485565, guid: 9668459b3285f274ab3f1dad07e476c1, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445886310449485565, guid: 9668459b3285f274ab3f1dad07e476c1, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445886310449485565, guid: 9668459b3285f274ab3f1dad07e476c1, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 05b977985d9383c4bae57a63954cb8ca, type: 3}
+    - target: {fileID: 3445886310492073579, guid: 9668459b3285f274ab3f1dad07e476c1, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: ae59daba91befd74a897a1bbfa53185a, type: 3}
+    - target: {fileID: 3445886310858591430, guid: 9668459b3285f274ab3f1dad07e476c1, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: ae59daba91befd74a897a1bbfa53185a, type: 3}
     - target: {fileID: 3445886311009252928, guid: 9668459b3285f274ab3f1dad07e476c1, type: 3}
       propertyPath: m_Name
       value: Canvas
