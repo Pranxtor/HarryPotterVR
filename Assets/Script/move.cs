@@ -6,28 +6,29 @@ public class move : MonoBehaviour
 {
     public GameObject o;
 
-    private bool test;
+    private bool grabed;
 
     // Start is called before the first frame update
     void Start()
     {
-        test = false;
+        grabed = false;
     }
 
     public void Update()
     {
-        if(test)
+        if(grabed)
             this.transform.position = o.transform.position;
     }
 
     // Update is called once per frame
     public void Move()
     {
-        test = true;
+        grabed = true;
     }
 
     public void UnMove()
     {
-        test = false;
+        grabed = false;
+        this.transform.position = new Vector3(0,0,0);
     }
 }

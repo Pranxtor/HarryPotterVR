@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UserEmbourbement : MonoBehaviour
 {
+    public GameObject gameover;
     public float speed;
     public Vector3 target;
     // Start is called before the first frame update
@@ -11,6 +13,7 @@ public class UserEmbourbement : MonoBehaviour
     {
         target = new Vector3(0, -1, 0);
         speed = 0.025f;
+        gameover.SetActive(false);
     }
 
     // Update is called once per frame
@@ -25,9 +28,16 @@ public class UserEmbourbement : MonoBehaviour
         }
     }
 
+    public IEnumerator wait()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     void gameOver()
     {
-      
+        gameover.SetActive(true);
+        StartCoroutine(wait());
 
     }
 }

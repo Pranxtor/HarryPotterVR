@@ -17,6 +17,7 @@ public class Connected : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("collide");
         if (collision.gameObject == aRendreInvisible)
         {
             aRendreInvisible.SetActive(false);
