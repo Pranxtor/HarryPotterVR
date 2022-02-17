@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1770,7 +1770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11428742, guid: 8c9f0c23c52027445b918539b1026af4, type: 3}
       propertyPath: m_Text
-      value: "\t\nAccio\n\nun petit cercle attirera l'objet que tu veux tenir dans
+      value: "\t\nAccio\n\nUn petit cercle attirera l'objet que tu veux tenir dans
         ta main "
       objectReference: {fileID: 0}
     - target: {fileID: 11428742, guid: 8c9f0c23c52027445b918539b1026af4, type: 3}
@@ -3020,7 +3020,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11428742, guid: 8c9f0c23c52027445b918539b1026af4, type: 3}
       propertyPath: m_Text
-      value: "\t\nLumos \n\n\nFait un triangle\nLe bout de ta baguette s'allumera"
+      value: "\t\nLumos \n\n\nFait un triangle en maintenant les deux boutons\nLe
+        bout de ta baguette s'allumera"
       objectReference: {fileID: 0}
     - target: {fileID: 11428742, guid: 8c9f0c23c52027445b918539b1026af4, type: 3}
       propertyPath: m_Color.b
@@ -7976,7 +7977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11416696, guid: 8c9f0c23c52027445b918539b1026af4, type: 3}
       propertyPath: m_Text
-      value: "Exam fin d'ann\xE9e : \ntraverse les \xE9preuves \xE0 l'aide des sorts
+      value: "Exam fin d'ann\xE9e : \nTraverse les \xE9preuves \xE0 l'aide des sorts
         et des indices \nlit bien "
       objectReference: {fileID: 0}
     - target: {fileID: 11416696, guid: 8c9f0c23c52027445b918539b1026af4, type: 3}
