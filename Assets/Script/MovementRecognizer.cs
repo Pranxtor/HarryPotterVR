@@ -5,7 +5,6 @@ using UnityEngine.XR;
 using PDollarGestureRecognizer;
 using System.IO;
 using UnityEngine.Events;
-using System.Xml;
 
 public class MovementRecognizer : MonoBehaviour
 {
@@ -35,10 +34,13 @@ public class MovementRecognizer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        trainingSet.Add(GestureIO.ReadGestureFromFile( "Assets/Resources/Lumos.xml"));
-        trainingSet.Add(GestureIO.ReadGestureFromFile( "Assets/Resources/Accio.xml"));
         Debug.Log("Start");
-
+        Debug.Log(recognitionThreshold);
+        string[] gestureFiles = Directory.GetFiles(Application.persistentDataPath, "*.xml");
+        foreach(var item in gestureFiles)
+        {
+            trainingSet.Add(GestureIO.ReadGestureFromFile(item));
+        }
     }
 
     // Update is called once per frame

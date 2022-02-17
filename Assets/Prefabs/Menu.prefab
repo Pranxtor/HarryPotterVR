@@ -132,6 +132,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: ae59daba91befd74a897a1bbfa53185a, type: 3}
     - target: {fileID: 3445886310858591430, guid: 9668459b3285f274ab3f1dad07e476c1, type: 3}
+      propertyPath: m_Text
+      value: QUITTER
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445886310858591430, guid: 9668459b3285f274ab3f1dad07e476c1, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: ae59daba91befd74a897a1bbfa53185a, type: 3}
