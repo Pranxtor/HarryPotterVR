@@ -17,7 +17,7 @@ public class Connected : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("collide");
+        // si l'objet rentre en colision avec le bon objet
         if (collision.gameObject == aRendreInvisible)
         {
             aRendreInvisible.SetActive(false);
@@ -25,16 +25,4 @@ public class Connected : MonoBehaviour
         }
 
     }
-/*
-    void OnCollisionExit(Collision collision)
-    {
-
-        if (collision.gameObject.CompareTag(cube1.tag))
-        {
-            aRendreInvisible.SetActive(true);
-        }
-     
-        
-    }
-    */
 }

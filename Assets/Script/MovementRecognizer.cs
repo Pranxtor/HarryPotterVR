@@ -34,8 +34,12 @@ public class MovementRecognizer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Start");
-        Debug.Log(recognitionThreshold);
+        
+        //Ajout des fichier XML
+        trainingSet.Add(GestureIO.ReadGestureFromFile( "Assets/Resources/Lumos.xml"));
+        trainingSet.Add(GestureIO.ReadGestureFromFile( "Assets/Resources/Accio.xml"));
+
+        //SI des fichier son dans le DataPath
         string[] gestureFiles = Directory.GetFiles(Application.persistentDataPath, "*.xml");
         foreach(var item in gestureFiles)
         {
